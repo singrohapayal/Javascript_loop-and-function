@@ -1,0 +1,27 @@
+const books = [];
+function mintNFT (book_name,author_name,Lang,Edition,Price) {
+    const books_details = {
+        "Book_Name": book_name,
+        "Author_Name": author_name,
+        "Language": Lang,
+        "Edition": Edition,
+        "Book_Price": Price,
+    }
+    books.push(books_details);
+    console.log("Books details is successfully added.");
+}
+function listNFTs () {
+    for(let i = 0; i < books.length; i++) {
+        console.log(books[i]);
+    }
+}
+function getTotalSupply() {
+    console.log("Total No. of books : " + books.length);
+}
+mintNFT("Mathematics","Payal Singroha","English","5th",450);
+mintNFT("Physics","Karan Kumar","English","12th",320);
+mintNFT("Chemistry","Jyoti Kumari","English","1st",360);
+mintNFT("Politics","Puja Gorai","English","4th",250);
+mintNFT("English","Om Gorai","English","6th",240);
+listNFTs();
+getTotalSupply();
